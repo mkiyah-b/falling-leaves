@@ -1,0 +1,155 @@
+body {
+    margin:0;
+    padding:0;
+    min-height:100vh;
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 100;
+}
+#main {
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:400px;
+  height:400px;
+  margin:25px auto 0;
+}
+
+#background {
+    position: absolute;
+    top: -10px;
+    width: 600px;
+    height: 560px;
+    background: -webkit-linear-gradient(bottom, skyblue, rgb(130, 130, 255));
+}
+
+.leaf {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    border-radius: 15px 0 15px 0;
+    background-color: orangered;
+}
+
+.active {
+    animation: leafFall 7s ease-in-out forwards;
+}
+
+@keyframes leafFall {
+    0% {top: var(--top);}
+    50% {rotate: 70deg;}
+    100% {top: 295px; rotate: 45deg;}
+}
+
+/* .leaf i {
+    position: absolute;
+    top: 125px;
+    height: 10px;
+    width: 20px;
+    border-radius: 100%;
+    background-color: black;
+} */
+
+#tree {
+    position: absolute;
+    top: 20px;
+}
+#trunk {
+    position: absolute;
+    top: 80px;
+    left: -100px;
+    height: 400px;
+    width: 200px;
+    background-color: brown;
+    clip-path: polygon(50px 0, 30px 250px, 0 400px, 200px 400px, 170px 250px, 150px 0);
+}
+#top {
+    position: absolute;
+    left: -200px;
+    height: 200px;
+    width: 400px;
+    background-color: orange;
+    border-radius: 100px;
+}
+#top i:nth-child(1){
+    position: absolute;
+    left: -20px;
+    height: 100px;
+    width: 100px;
+    background-color: orange;
+    border-radius: 100%;
+}
+#top i:nth-child(2){
+    position: absolute;
+    top: 70px;
+    left: -10px;
+    height: 100px;
+    width: 100px;
+    background-color: orange;
+    border-radius: 100%;
+}
+#top i:nth-child(3){
+    position: absolute;
+    top: 140px;
+    left: 250px;
+    height: 100px;
+    width: 120px;
+    background-color: orange;
+    border-radius: 80%;
+    rotate: -10deg;
+}
+#top i:nth-child(4){
+    position: absolute;
+    top: -25px;
+    left: 280px;
+    height: 150px;
+    width: 150px;
+    background-color: orange;
+    border-radius: 100%;
+}
+#top i:nth-child(5){
+    position: absolute;
+    top: -25px;
+    left: 260px;
+    height: 50px;
+    width: 50px;
+    background-color: orange;
+    border-radius: 100%;
+}
+
+#hole {
+    position: absolute;
+    top: 300px;
+    left: -50px;
+    height: 50px;
+    width: 40px;
+    background-color: rgb(85, 17, 17);
+    border-radius: 100%;
+}
+#hole i {
+    position: absolute;
+    top: 2px;
+    left: 8px;
+    height: 45px;
+    width: 32px;
+    background-color: black;
+    border-radius: 80%;
+}
+#grass {
+    position: absolute;
+    top: 500px;
+    height: 50px;
+    width: 600px;
+    background-color: orange;
+    border-radius: 50px 50px 0 0;
+}
+#branch {
+    position: absolute;
+    left: -160px;
+    top: 250px;
+    height: 40px;
+    width: 100px;
+    background-color: brown;
+    clip-path: polygon(10px 0, 30px 15px, 100px 20px, 100px 40px, 20px 30px, 0 0)
+}

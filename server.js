@@ -22,16 +22,16 @@ io.on('connection', (socket) => {
   console.log('Client connected');
   console.log(socket.id);
   
-  //receives the frequency emitter from Client
-  socket.on("frequency", (arg) => {
+  //receives the rotation value of the slider from Client
+  socket.on("rotation", (arg) => {
     console.log(arg); 
-    io.emit('freqResponse', arg);
+    io.emit('rotResponse', arg);
   });
 
-  //receives the name emitter from Client
-  socket.on("name", (arg) => {
-    //console.log(arg);
-    io.emit('response', arg);
+  //recieve the class of leaf?
+  socket.on("activeClass", (arg) => {
+    console.log(arg); 
+    io.emit('classResponse', arg);
   });
 
   socket.on('disconnect', () => console.log('Client disconnected'));
