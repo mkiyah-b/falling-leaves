@@ -29,7 +29,7 @@ body {
     height: 20px;
     width: 20px;
     border-radius: 15px 0 15px 0;
-    background-color: orangered;
+    background: -webkit-radial-gradient(orangered, rgb(255, 128, 0));
 }
 
 .active {
@@ -61,7 +61,7 @@ body {
     left: -100px;
     height: 400px;
     width: 200px;
-    background-color: brown;
+    background: -webkit-linear-gradient(left, brown, rgb(121, 27, 27));
     clip-path: polygon(50px 0, 30px 250px, 0 400px, 200px 400px, 170px 250px, 150px 0);
 }
 #top {
