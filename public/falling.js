@@ -1,5 +1,5 @@
 let socket = io();
-let pumpToggle = false;
+let day = true;
 
 //find the clicked leaf, tell it to change classes
 let leaves = document.querySelectorAll('.leaf');
@@ -29,13 +29,15 @@ socket.on('classResponse', (data) => {
 ///  eyes shine in the hole
 let pumpkin = document.querySelector('#pumpkin');
 pumpkin.addEventListener('click', function() {
-    pumpToggle = !pumpToggle;
-    console.log(pumpToggle);
-    socket.emit("pumpkin", pumpToggle);
+    day = !day;
+    // console.log(day);
+    socket.emit("pumpkin", day);
 });
 
 socket.on('pumpkinToggle', (data) => {
-    if (pumpToggle) {
+    day = data;
+    if (data == false) {
+        console.log("It's night!");
         document.querySelectorAll('#face').forEach(faceJack => {
             faceJack.style.backgroundColor = "yellow";
         });
@@ -45,6 +47,7 @@ socket.on('pumpkinToggle', (data) => {
         });
     }
     else {
+        console.log("It's day!");
         document.querySelectorAll('#face').forEach(faceJack => {
             faceJack.style.backgroundColor = "black";
         });
