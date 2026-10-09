@@ -24,6 +24,7 @@ body {
     background: -webkit-linear-gradient(bottom, skyblue, rgb(130, 130, 255));
 }
 
+
 .leaf {
     position: relative;
     height: 20px;
@@ -152,4 +153,112 @@ body {
     width: 100px;
     background-color: brown;
     clip-path: polygon(10px 0, 30px 15px, 100px 20px, 100px 40px, 20px 30px, 0 0)
+}
+
+#pumpkin {
+  position: absolute;
+  top: 451px;
+  left: 280px;
+}
+#pumpkin i:nth-child(2) {
+    position: absolute;
+    top: -15px;
+    left: 34px;
+    height: 30px;
+    width: 15px;
+    rotate: 10deg;
+    clip-path: polygon(2px 0, 10px 0, 15px 20px, 0 20px);
+    background-color: brown;
+}
+#pumpkin i:nth-child(3) {
+    position: absolute;
+    height: 50px;
+    width: 40px;
+    background-color: rgb(236, 102, 0);
+    border-radius: 100% 100% 80% 80%;
+}
+#pumpkin i:nth-child(4) {
+    position: absolute;
+    left: 40px;
+    height: 50px;
+    width: 40px;
+    background-color:  rgb(236, 102, 0);
+    border-radius: 100% 100% 80% 80%;
+}
+#pumpkin i:nth-child(5) {
+    position: absolute;
+    left: 20px;
+    height: 50px;
+    width: 40px;
+    background-color: rgb(243, 121, 27);
+    border-radius: 100% 100% 80% 80%;
+}
+#pumpkin i:nth-child(6) {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    height: 20px;
+    width: 20px;
+    clip-path: polygon(0 12px, 7px 0, 12px 12px);
+    background-color: black;
+    rotate: 2deg;
+}
+
+#pumpkin i:nth-child(7) {
+    position: absolute;
+    left: 50px;
+    top: 10px;
+    height: 20px;
+    width: 20px;
+    clip-path: polygon(0 12px, 7px 0, 12px 12px);
+    background-color: black;
+    rotate: -2deg;
+}
+
+#pumpkin i:nth-child(8) {
+    position: absolute;
+    left: 14px;
+    top: 35px;
+    height: 10px;
+    width: 50px;
+    background-color: black;
+    border-radius: 0px 0px 100px 100px;
+}
+#pumpkin i:nth-child(9) {
+    position: absolute;
+    left: 25px;
+    top: 33px;
+    height: 5px;
+    width: 5px;
+    border-radius: 100%;
+    background-color: rgb(243, 121, 27);
+}
+#pumpkin i:nth-child(1) {
+    position: absolute;
+    top: 46px;
+    width: 80px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.567);
+    border-radius: 100%;
+}
+
+#eyes {
+    position: absolute;
+    top: 320px;
+    left: -35px;
+}
+#eyes i:nth-child(1) {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 100%;
+}
+#eyes i:nth-child(2) {
+    position: absolute;
+    left: 11px;
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 100%;
 }

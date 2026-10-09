@@ -34,6 +34,12 @@ io.on('connection', (socket) => {
     io.emit('classResponse', arg);
   });
 
+  //recieve the pumpkin
+  socket.on("pumpkin", (arg) => {
+    console.log(arg);
+    io.emit('pumpkinToggle', arg);
+  });
+
   socket.on('disconnect', () => console.log('Client disconnected'));
 });
 
