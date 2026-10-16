@@ -52,9 +52,10 @@ socket.on('pumpkinToggle', (data) => {
         });
         if (clientCount == 1) {
             document.querySelector('#ghost').style.display = "inline";
+            document.querySelector('#ghost').classList.remove("disappear");
         } 
         else {
-            document.querySelector('#ghost').style.display = "none";
+            document.querySelector('#ghost').classList.add("disappear");
         }
     }
     else {

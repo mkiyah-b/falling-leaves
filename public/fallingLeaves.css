@@ -303,3 +303,12 @@ body {
     height: 30px;
     rotate: 45deg;
 }
+
+.disappear {
+    animation: hide 5s forwards;
+}
+
+@keyframes hide {
+    0% {opacity: 1.0;}
+    100% {opacity: 0.0;}
+}
