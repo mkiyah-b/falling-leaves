@@ -45,6 +45,7 @@ socket.on('pumpkinToggle', (data) => {
         document.querySelectorAll('#eye').forEach(eye => {
             eye.style.backgroundColor = "yellowgreen";
         });
+        // document.querySelector('#ghost').style.display = "inline";
     }
     else {
         console.log("It's day!");
@@ -57,6 +58,35 @@ socket.on('pumpkinToggle', (data) => {
         });
         leaves.forEach(leaf => {
             leaf.classList.replace('active', 'dormant');
-        })
+        });
+        // document.querySelector('#ghost').style.display = "none";
+    }
+});
+
+// if eyes are clicked, they go away
+// let eyes = document.querySelector('#eyes');
+// console.log(eyes);
+// eyes.addEventListener('click', function() {
+//     console.log('EYES');
+//     eyes.childNodes[0].style.backgroundColor = "black";
+//     eyes.childNodes[1].style.backgroundColor = "black";
+// });
+    
+
+socket.on('bats', (data) => {
+    if (data) {
+        document.querySelector('#bats').style.display = "initial";
+    }
+    else {
+        document.querySelector('#bats').style.display = "none";
+    }
+});
+
+socket.on('skeleton', (data) => {
+    if (data) {
+        document.querySelector('#skeleton').style.display = "initial";
+    }
+    else {
+        document.querySelector('#skeleton').style.display = "none";
     }
 });

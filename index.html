@@ -9,20 +9,18 @@
     <meta property="og:type" content="article" />
     <meta property="og:url"/>
     <meta property="og:description" content="falling leaves by M'Kiyah (2026)" />
-    <meta
-      property="og:image"
-      content="https://frequency-links.vercel.app/holdinghands.png"
-    />
     <meta name="twitter:card" content="summary" />
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/p5.sound@latest/dist/p5.sound.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5.sound@latest/dist/p5.sound.min.js"></script> -->
     <link rel="stylesheet" type="text/css" href="fallingLeaves.css">
     <script src="/socket.io/socket.io.js"></script>
     <title>Falling Leaves</title>
   </head>
   <body>
+    <div id="left"></div>
     <div id="main">
       <div id="background"></div>
+      <img id="bats" src="">
       <div id="tree">
         <i id="trunk"></i>
         <i id="branch"></i>
@@ -38,6 +36,7 @@
           <i></i>
         </i>
       </div>
+      <img id="ghost" src="public/ghost.png">
       <div id="grass"></div>
       <div id="pumpkin">
         <i></i>
@@ -50,12 +49,13 @@
         <i id="face"></i>
         <i></i>
       </div>
-      <div id="l1" class="leaf dormant" style="--top: 22px; top: 22px; left: -100px;"></div>
-      <div id="l2" class="leaf dormant" style="--top: -100px; top: -100px; left: 260px; rotate: 0deg;"></div>
-      <div id="l3" class="leaf dormant" style="--top: -80px; top: -80px; left: 238px; rotate: 60deg;"></div>
-      <div id="l4" class="leaf dormant" style="--top: 30px; top: 30px; rotate: -90deg;"></div>
-      <div id="l5" class="leaf dormant" style="--top: -190px; top:-190px; left: 15px;"></div>
-      <div id="l6" class="leaf dormant" style="--top: -185px; top:-185px; left: -245px; rotate: -85deg;"></div>
+      <img id="skeleton" src="">
+      <div id="l1" class="leaf dormant" style="--top: 0px; top: 0px; left: 25px;"></div>
+      <div id="l2" class="leaf dormant" style="--top: 170px; top: 170px; left: -20px; rotate: 0deg;"></div>
+      <div id="l3" class="leaf dormant" style="--top: 80px; top: 80px; left: 430px; rotate: 60deg;"></div>
+      <div id="l4" class="leaf dormant" style="--top: 0px; top: 0px; rotate: -90deg;"></div>
+      <div id="l5" class="leaf dormant" style="--top: 220px; top:220px; left: 115px;"></div>
+      <div id="l6" class="leaf dormant" style="--top: 185px; top:185px; left: 375px; rotate: -85deg;"></div>
     </div>
     <script src="falling.js"></script>
   </body>

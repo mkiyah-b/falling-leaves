@@ -1,10 +1,11 @@
 body {
     margin:0;
     padding:0;
-    min-height:100vh;
+    min-height: 80vh;
     font-family: sans-serif;
     font-size: 13px;
     font-weight: 100;
+    background-color: rgb(39, 40, 41);
 }
 #main {
   position:relative;
@@ -13,7 +14,7 @@ body {
   align-items:center;
   width:400px;
   height:400px;
-  margin: 45px auto 0;
+  margin: 15vh auto 0;
 }
 
 #background {
@@ -26,7 +27,7 @@ body {
 
 
 .leaf {
-    position: relative;
+    position: absolute;
     height: 20px;
     width: 20px;
     border-radius: 15px 0 15px 0;
@@ -40,7 +41,7 @@ body {
 @keyframes leafFall {
     0% {top: var(--top);}
     50% {rotate: 70deg;}
-    100% {top: 295px; rotate: 45deg;}
+    100% {top: 488px; rotate: 45deg;}
 }
 
 /* .leaf i {
@@ -261,4 +262,9 @@ body {
     height: 5px;
     background-color: black;
     border-radius: 100%;
+}
+
+#ghost {
+    display: none;
+    position: absolute;
 }
