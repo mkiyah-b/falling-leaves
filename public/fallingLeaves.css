@@ -5,7 +5,8 @@ body {
     font-family: sans-serif;
     font-size: 13px;
     font-weight: 100;
-    background-color: rgb(39, 40, 41);
+    /* background-image: url("grungeBackground.jpg"); */
+    background-color: rgb(88, 63, 88);
 }
 #main {
   position:relative;
@@ -275,9 +276,9 @@ body {
 
 #frame {
     position: absolute;
-    top: -48px;
+    top: -46px;
     object-fit: cover;
-    height: 635px;
+    height: 630px;
 }
 
 #spider {
