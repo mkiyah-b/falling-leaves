@@ -1,4 +1,5 @@
 let socket = io();
+let clientCount = 0;
 // let day = true;
 
 //find the clicked leaf, tell it to change classes
@@ -22,6 +23,10 @@ socket.on('classResponse', (data) => {
     console.log('a user turned #' + data + ' active');
 });
 
+
+socket.on('clientCount', (data) => {
+    clientCount = data;
+})
 // when you click the pumpkin:
 ///  it turns on as a jack-o-lantern
 ///  the sky turns to night (stars?)
@@ -45,7 +50,12 @@ socket.on('pumpkinToggle', (data) => {
         document.querySelectorAll('#eye').forEach(eye => {
             eye.style.backgroundColor = "yellowgreen";
         });
-        // document.querySelector('#ghost').style.display = "inline";
+        if (clientCount == 1) {
+            document.querySelector('#ghost').style.display = "inline";
+        } 
+        else {
+            document.querySelector('#ghost').style.display = "none";
+        }
     }
     else {
         console.log("It's day!");
@@ -59,7 +69,7 @@ socket.on('pumpkinToggle', (data) => {
         leaves.forEach(leaf => {
             leaf.classList.replace('active', 'dormant');
         });
-        // document.querySelector('#ghost').style.display = "none";
+        document.querySelector('#ghost').style.display = "none";
     }
 });
 
@@ -73,20 +83,20 @@ socket.on('pumpkinToggle', (data) => {
 // });
     
 
-socket.on('bats', (data) => {
-    if (data) {
-        document.querySelector('#bats').style.display = "initial";
-    }
-    else {
-        document.querySelector('#bats').style.display = "none";
-    }
-});
+// socket.on('bats', (data) => {
+//     if (data) {
+//         document.querySelector('#bats').style.display = "initial";
+//     }
+//     else {
+//         document.querySelector('#bats').style.display = "none";
+//     }
+// });
 
-socket.on('skeleton', (data) => {
-    if (data) {
-        document.querySelector('#skeleton').style.display = "initial";
-    }
-    else {
-        document.querySelector('#skeleton').style.display = "none";
-    }
-});
+// socket.on('skeleton', (data) => {
+//     if (data) {
+//         document.querySelector('#skeleton').style.display = "initial";
+//     }
+//     else {
+//         document.querySelector('#skeleton').style.display = "none";
+//     }
+// });

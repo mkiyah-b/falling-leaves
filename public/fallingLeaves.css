@@ -267,4 +267,38 @@ body {
 #ghost {
     display: none;
     position: absolute;
+    left: 60px;
+    top: 232px;
+    height: 70px;
+    object-fit: cover;
+}
+
+#frame {
+    position: absolute;
+    top: -48px;
+    object-fit: cover;
+    height: 635px;
+}
+
+#spider {
+    position: absolute;
+    top: 252px;
+    left: 300px;
+    height: 200px;
+}
+
+#bat1 {
+    position: absolute;
+    padding: 2px;
+    top: 2%;
+    left: 5vh;
+    height: 50px;
+    rotate: -30deg;
+}
+#bat2 {
+    position: absolute;
+    top: 93%;
+    left: 82%;
+    height: 30px;
+    rotate: 45deg;
 }

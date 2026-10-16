@@ -27,19 +27,20 @@ io.on('connection', (socket) => {
   console.log('Client connected');
   console.log(socket.id);
   clientCount++;
-  if (clientCount == 1) {
-    skeleton = true;
-  }
-  else if (clientCount > 2 && !day) {
-    bats = true;
-  }
-  else {
-    bats = false;
-    skeleton = false;
-  }
-  io.emit('bats', bats);
-  io.emit('skeleton', skeleton);
-  // io.emit('pumpkinToggle', day);
+  io.emit('clientCount', clientCount);
+  // if (clientCount == 1) {
+  //   skeleton = true;
+  // }
+  // else if (clientCount > 2 && !day) {
+  //   bats = true;
+  // }
+  // else {
+  //   bats = false;
+  //   skeleton = false;
+  // }
+  // io.emit('bats', bats);
+  // io.emit('skeleton', skeleton);
+  io.emit('pumpkinToggle', day);
   
   //receives the rotation value of the slider from Client
   // socket.on("rotation", (arg) => {
@@ -68,6 +69,7 @@ io.on('connection', (socket) => {
   socket.on('disconnect', () => {
     clientCount--;
     console.log('Client disconnected')
+    io.emit('clientCount', clientCount);
   });
 });
 
